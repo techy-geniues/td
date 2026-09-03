@@ -1,0 +1,2704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teachers' Day | BCS DITMS</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#03172f;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.page{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 10% 10%,#087dc8,transparent 25%),
+    radial-gradient(circle at 90% 90%,#063e82,transparent 30%),
+    linear-gradient(135deg,#02142d,#07518c,#02142d);
+}
+
+
+/* =====================================================
+   MAIN BACKGROUND SPRINKLER
+===================================================== */
+
+#mainSparkles{
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    z-index:1;
+
+    pointer-events:none;
+
+    overflow:hidden;
+}
+
+.main-spark{
+    position:absolute;
+
+    color:#fff;
+
+    font-size:15px;
+
+    text-shadow:
+        0 0 6px #fff,
+        0 0 14px #6bd5ff;
+
+    animation:
+        mainSparkle 2.5s ease-in-out infinite;
+}
+
+@keyframes mainSparkle{
+
+    0%{
+        opacity:0;
+        transform:scale(.2) rotate(0deg);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.2) rotate(180deg);
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(.2) rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.content{
+    position:relative;
+
+    z-index:5;
+
+    width:min(1100px,94%);
+
+    margin:25px auto;
+
+    padding:40px 30px;
+
+    background:rgba(255,255,255,.98);
+
+    border-radius:30px;
+
+    border:3px solid #91d9ff;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.5);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header{
+    text-align:center;
+}
+
+.header-icon{
+    font-size:58px;
+
+    animation:
+        floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.tagline{
+    margin-top:10px;
+
+    color:#087ed0;
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    font-weight:bold;
+}
+
+.header h1{
+    margin:10px 0;
+
+    color:#064d98;
+
+    font-size:52px;
+}
+
+.subtitle{
+    color:#6c8298;
+
+    font-size:17px;
+}
+
+
+/* =====================================================
+   CONDUCTED BY
+===================================================== */
+
+.conducted{
+
+    width:min(650px,100%);
+
+    margin:25px auto;
+
+    padding:20px;
+
+    text-align:center;
+
+    color:#fff;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #034d99,
+        #0799ee
+    );
+
+    box-shadow:
+        0 12px 30px rgba(0,110,220,.3);
+}
+
+.conducted small{
+    display:block;
+
+    margin-bottom:7px;
+
+    letter-spacing:3px;
+}
+
+.conducted h2{
+    font-size:30px;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.message{
+
+    width:min(820px,100%);
+
+    margin:25px auto;
+
+    padding:22px;
+
+    color:#4d647a;
+
+    text-align:center;
+
+    line-height:1.7;
+
+    background:#edf8ff;
+
+    border-left:6px solid #0788e8;
+
+    border-radius:15px;
+}
+
+.message b{
+    color:#064d98;
+}
+
+
+/* =====================================================
+   TEACHERS
+===================================================== */
+
+.section-title{
+
+    margin:35px 0 20px;
+
+    text-align:center;
+
+    color:#064d98;
+}
+
+.teachers{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+}
+
+.teacher{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:16px;
+
+    background:#fff;
+
+    border:2px solid #d8efff;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+        0 5px 15px rgba(0,70,130,.05);
+}
+
+.teacher:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#0788e8;
+
+    box-shadow:
+        0 15px 30px rgba(0,100,200,.18);
+}
+
+.avatar{
+
+    width:200px;
+    height:200px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin-right:14px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    color:#fff;
+
+    font-size:23px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0564bd,
+        #59caff
+    );
+}
+
+.avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.teacher-name{
+
+    color:#063e7c;
+
+    font-size:15px;
+
+    font-weight:bold;
+}
+
+.teacher-role{
+
+    margin-top:5px;
+
+    color:#72869a;
+
+    font-size:12px;
+}
+
+.arrow{
+
+    margin-left:auto;
+
+    color:#0788e8;
+
+    font-size:30px;
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard{
+
+    margin-top:35px;
+
+    padding:25px;
+
+    background:#f0f9ff;
+
+    border:2px solid #d7edff;
+
+    border-radius:20px;
+}
+
+.dashboard h2{
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+    color:#064d98;
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:12px;
+}
+
+.stat{
+
+    padding:18px;
+
+    text-align:center;
+
+    background:#fff;
+
+    border-radius:15px;
+}
+
+.number{
+
+    color:#0788e8;
+
+    font-size:30px;
+
+    font-weight:bold;
+}
+
+.label{
+
+    margin-top:5px;
+
+    color:#71869a;
+
+    font-size:12px;
+}
+
+.reserved-list{
+
+    margin-top:18px;
+}
+
+.no-reservation{
+
+    padding:10px;
+
+    color:#71869a;
+
+    text-align:center;
+}
+
+.reserved-item{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    border:1px solid #d9edff;
+}
+
+.check{
+
+    width:35px;
+    height:35px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin-right:10px;
+
+    color:#fff;
+
+    background:#0788e8;
+
+    border-radius:50%;
+}
+
+.reserved-name{
+
+    color:#073e80;
+
+    font-weight:bold;
+
+    font-size:14px;
+}
+
+.reserved-role{
+
+    margin-top:3px;
+
+    color:#71869a;
+
+    font-size:11px;
+}
+
+.reserved-seat{
+
+    margin-left:auto;
+
+    color:#0788e8;
+
+    font-weight:bold;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    text-align:center;
+
+    border-top:1px solid #d7ebff;
+}
+
+.footer h2{
+
+    color:#0755a5;
+}
+
+.footer p{
+
+    margin-top:7px;
+
+    color:#71869a;
+}
+
+.creator{
+
+    margin-top:12px;
+
+    color:#0788e8;
+
+    font-size:13px;
+
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   THEATRE
+===================================================== */
+
+.theatre{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    z-index:10000;
+
+    display:none;
+
+    overflow:hidden;
+
+    background:#000;
+}
+
+.theatre.active{
+    display:block;
+}
+
+.stage{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(
+        ellipse at center,
+        #116fa9,
+        #06385e 45%,
+        #010b18 100%
+    );
+}
+
+
+/* =====================================================
+   STAGE LIGHT
+===================================================== */
+
+.stage-light{
+
+    position:absolute;
+
+    left:50%;
+    top:0;
+
+    width:70vw;
+    height:100vh;
+
+    transform:translateX(-50%);
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(170,230,255,.13),
+        transparent
+    );
+}
+
+
+/* =====================================================
+   RED CURTAINS
+===================================================== */
+
+.curtain{
+
+    position:absolute;
+
+    top:0;
+
+    width:51%;
+
+    height:100%;
+
+    z-index:30;
+
+    transition:
+    transform 1.8s
+    cubic-bezier(.72,0,.18,1);
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #210003 0px,
+        #500006 25px,
+        #a40018 48px,
+        #c50022 62px,
+        #71000d 82px,
+        #320005 105px
+    );
+
+    box-shadow:
+    inset 0 0 60px rgba(0,0,0,.75);
+}
+
+.curtain:after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08) 15px,
+        transparent 30px
+    );
+}
+
+.left-curtain{
+
+    left:0;
+
+    border-right:
+    5px solid #d6ae4e;
+}
+
+.right-curtain{
+
+    right:0;
+
+    border-left:
+    5px solid #d6ae4e;
+}
+
+.theatre.open .left-curtain{
+    transform:translateX(-100%);
+}
+
+.theatre.open .right-curtain{
+    transform:translateX(100%);
+}
+
+
+/* =====================================================
+   GOLD TOP
+===================================================== */
+
+.gold-top{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:42px;
+
+    z-index:40;
+
+    background:
+    linear-gradient(
+        #ffe28a,
+        #9d6812,
+        #e7c057
+    );
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.6);
+}
+
+
+/* =====================================================
+   INVITATION SCREEN
+   NO SCROLL BAR
+===================================================== */
+
+.invitation{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:92vw;
+
+    max-width:700px;
+
+    height:86vh;
+
+    transform:
+    translate(-50%,-50%)
+    scale(.85);
+
+    z-index:20;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:#fff;
+
+    opacity:0;
+
+    transition:
+    opacity .8s 1s,
+    transform .8s 1s;
+
+    overflow:hidden;
+}
+
+.theatre.open .invitation{
+
+    opacity:1;
+
+    transform:
+    translate(-50%,-50%)
+    scale(1);
+}
+
+
+/* =====================================================
+   INVITATION CONTENT
+===================================================== */
+
+.invite-icon{
+
+    font-size:48px;
+}
+
+.invite-label{
+
+    margin-top:5px;
+
+    color:#9adfff;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    font-weight:bold;
+}
+
+.teacher-big-name{
+
+    margin-top:7px;
+
+    color:#fff;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    text-shadow:
+    0 0 20px rgba(90,210,255,.7);
+}
+
+.invite-icon img{
+
+    width:200px;
+
+    height:200px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #9adfff;
+}
+
+.teacher-big-role{
+
+    margin-top:4px;
+
+    color:#b9dcef;
+
+    font-size:14px;
+}
+
+.personal-message{
+
+    width:min(600px,90vw);
+
+    margin:12px auto;
+
+    color:#d7efff;
+
+    font-size:14px;
+
+    line-height:1.5;
+}
+
+.personal-message b{
+
+    color:#91dcff;
+}
+.invitation{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:92vw;
+
+    max-width:700px;
+
+    height:86vh;
+
+    transform:
+    translate(-50%,-50%)
+    scale(.85);
+
+    z-index:20;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    text-align:center;
+
+    color:#fff;
+
+    opacity:0;
+
+    transition:
+    opacity .8s 1s,
+    transform .8s 1s;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    padding:30px 10px;
+
+    scrollbar-width:none;
+}
+
+.invitation::-webkit-scrollbar{
+    display:none;
+}
+
+/* =====================================================
+   SIGNATURE
+===================================================== */
+
+.signature-box{
+
+    width:min(520px,90vw);
+
+    padding:13px;
+
+    background:
+    rgba(0,22,48,.95);
+
+    border:
+    2px solid #70ceff;
+
+    border-radius:16px;
+
+    box-shadow:
+    0 0 30px rgba(0,140,255,.2);
+}
+
+.signature-title{
+
+    margin-bottom:8px;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+#signatureCanvas{
+
+    display:block;
+
+    width:100%;
+
+    height:130px;
+
+    background:#fff;
+
+    border:
+    3px solid #75d1ff;
+
+    border-radius:10px;
+
+    cursor:crosshair;
+
+    touch-action:none;
+}
+
+.signature-status{
+
+    height:18px;
+
+    margin-top:5px;
+
+    color:#a8c2d5;
+
+    font-size:11px;
+}
+
+.signature-status.success{
+
+    color:#65ffad;
+
+    font-weight:bold;
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:6px;
+}
+
+.clear-btn{
+
+    padding:8px 17px;
+
+    border:0;
+
+    border-radius:20px;
+
+    background:#526b82;
+
+    color:#fff;
+
+    cursor:pointer;
+}
+
+.reserve-btn{
+
+    padding:11px 24px;
+
+    border:0;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0796f2,
+        #034b9c
+    );
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 7px 20px rgba(0,130,240,.4);
+}
+
+.close-btn{
+
+    margin-top:8px;
+
+    padding:7px 20px;
+
+    border:
+    1px solid #8bdcff;
+
+    border-radius:20px;
+
+    background:
+    rgba(0,40,80,.8);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:12px;
+}
+
+
+/* =====================================================
+   CELEBRATION
+===================================================== */
+
+.celebration{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    z-index:50000;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(8,113,185,.97),
+        rgba(0,15,38,.99)
+    );
+}
+
+.celebration.show{
+    display:flex;
+}
+
+
+/* =====================================================
+   CELEBRATION SPARKLE LAYER
+===================================================== */
+
+#celebrationEffects{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+
+/* =====================================================
+   CELEBRATION CARD
+===================================================== */
+
+.celebration-card{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(550px,90vw);
+
+    padding:35px 22px;
+
+    text-align:center;
+
+    color:#fff;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(8,105,170,.98),
+        rgba(2,35,72,.98)
+    );
+
+    border:
+    3px solid #9ae5ff;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 0 70px rgba(0,180,255,.6);
+
+    animation:
+    celebrationPop .7s
+    cubic-bezier(.2,1.5,.4,1);
+}
+
+@keyframes celebrationPop{
+
+    0%{
+        opacity:0;
+        transform:scale(.3);
+    }
+
+    70%{
+        transform:scale(1.07);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.celebration-emoji{
+
+    font-size:60px;
+
+    animation:
+    party .7s infinite alternate;
+}
+
+@keyframes party{
+
+    from{
+        transform:rotate(-5deg) translateY(0);
+    }
+
+    to{
+        transform:rotate(5deg) translateY(-10px);
+    }
+}
+
+.celebration-card h1{
+
+    margin:10px 0;
+
+    font-size:31px;
+
+    text-shadow:
+    0 0 20px rgba(130,225,255,.7);
+}
+
+.welcome-name{
+
+    color:#91e0ff;
+
+    font-size:23px;
+
+    font-weight:bold;
+}
+
+.celebration-card p{
+
+    margin-top:10px;
+
+    color:#d8f3ff;
+
+    line-height:1.6;
+}
+
+.big-seat{
+
+    display:inline-block;
+
+    margin:16px 0;
+
+    padding:11px 25px;
+
+    color:#0756a6;
+
+    background:#fff;
+
+    border-radius:30px;
+
+    font-size:22px;
+
+    font-weight:bold;
+}
+
+.celebrate-close{
+
+    margin-top:15px;
+
+    padding:11px 25px;
+
+    border:0;
+
+    border-radius:25px;
+
+    background:#0795ef;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+
+/* =====================================================
+   FULL SCREEN SPRINKLES
+===================================================== */
+
+.confetti{
+
+    position:absolute;
+
+    top:-30px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    animation:
+    fall var(--duration)
+    linear forwards;
+}
+
+@keyframes fall{
+
+    0%{
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translate(
+            var(--x),
+            110vh
+        )
+        rotate(720deg);
+
+        opacity:0;
+    }
+}
+
+.burst{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    z-index:3;
+
+    pointer-events:none;
+
+    color:#fff;
+
+    font-size:18px;
+
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px #55d9ff;
+
+    animation:
+    burst 1.5s ease-out forwards;
+}
+
+@keyframes burst{
+
+    0%{
+        opacity:1;
+
+        transform:
+        translate(-50%,-50%)
+        scale(.2);
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translate(
+            calc(-50% + var(--x)),
+            calc(-50% + var(--y))
+        )
+        scale(1.5)
+        rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    .content{
+
+        width:96%;
+
+        padding:30px 15px;
+
+        margin:10px auto;
+    }
+
+    .header h1{
+
+        font-size:39px;
+    }
+
+    .teachers{
+
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+    }
+
+    .teacher-big-name{
+
+        font-size:27px;
+    }
+
+    .personal-message{
+
+        font-size:12px;
+
+        margin:8px auto;
+    }
+
+    .invitation{
+
+        height:88vh;
+    }
+
+    #signatureCanvas{
+
+        height:105px;
+    }
+
+    .signature-box{
+
+        padding:10px;
+    }
+
+    .celebration-card{
+
+        padding:30px 18px;
+    }
+
+    .celebration-card h1{
+
+        font-size:27px;
+    }
+
+    .celebration-emoji{
+
+        font-size:50px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MAIN PAGE
+===================================================== -->
+
+<div class="page">
+
+
+<!-- MAIN SPRINKLER -->
+
+<div id="mainSparkles"></div>
+
+
+<div class="content">
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+<div class="header-icon">
+🎓
+</div>
+
+<div class="tagline">
+A HEARTFELT INVITATION
+</div>
+
+<h1>
+Teachers' Day
+</h1>
+
+<p class="subtitle">
+Celebrating the mentors who shape our future
+</p>
+
+</div>
+
+
+<!-- CONDUCTED -->
+
+<div class="conducted">
+
+<small>
+PROGRAM CONDUCTED BY
+</small>
+
+<h2>
+BCS DITMS
+</h2>
+
+</div>
+
+
+<!-- MESSAGE -->
+
+<div class="message">
+
+<b>Respected Sir & Madam,</b>
+
+<br><br>
+
+A teacher doesn't simply teach lessons.
+A teacher inspires dreams, builds confidence
+and guides students towards a brighter future.
+
+<br><br>
+
+With immense respect and gratitude,
+we warmly invite you to join our
+<b>Teachers' Day Celebration.</b>
+
+<br><br>
+
+✨ Click your name below to open your special invitation. ✨
+
+</div>
+
+
+<!-- TEACHERS -->
+
+<h2 class="section-title">
+💙 Our Respected Teachers 💙
+</h2>
+
+<div
+class="teachers"
+id="teachersContainer">
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div class="dashboard">
+
+<h2>
+🎟️ Reservation Dashboard
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+
+<div
+class="number"
+id="totalTeachers">
+18
+</div>
+
+<div class="label">
+Total Teachers
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div
+class="number"
+id="reservedCount">
+0
+</div>
+
+<div class="label">
+Seats Reserved
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div
+class="number"
+id="remainingCount">
+18
+</div>
+
+<div class="label">
+Remaining
+</div>
+
+</div>
+
+</div>
+
+
+<div
+class="reserved-list"
+id="reservedList">
+
+<div class="no-reservation">
+No reservations yet.
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+<h2>
+💙 Thank You, Teachers! 💙
+</h2>
+
+<p>
+Your guidance today shapes our tomorrow.
+</p>
+
+<div class="creator">
+
+Website Created by<br>
+
+<strong>
+Samyak Sudarshan Mahindrakar
+</strong>
+
+<br>
+
+BCS DITMS
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     THEATRE
+===================================================== -->
+
+<div
+class="theatre"
+id="theatre">
+
+
+<div class="stage"></div>
+
+<div class="stage-light"></div>
+
+<div class="gold-top"></div>
+
+
+<!-- INVITATION -->
+
+<div class="invitation">
+
+
+<div
+class="invite-icon"
+id="teacherIcon">
+🎓
+</div>
+
+
+<div class="invite-label">
+A SPECIAL INVITATION FOR
+</div>
+
+
+<div
+class="teacher-big-name"
+id="teacherName">
+Teacher
+</div>
+
+
+<div
+class="teacher-big-role"
+id="teacherRole">
+Faculty
+</div>
+
+
+<div class="personal-message">
+
+Your guidance gives direction to our dreams.
+
+<br>
+
+<b>
+Your presence will make our Teachers' Day
+celebration complete.
+</b>
+
+<br>
+
+Please sign below to confirm your presence.
+
+</div>
+
+
+<!-- SIGNATURE -->
+
+<div class="signature-box">
+
+<div class="signature-title">
+✍️ Sign Here
+</div>
+
+
+<canvas
+id="signatureCanvas">
+</canvas>
+
+
+<div
+class="signature-status"
+id="signatureStatus">
+
+Draw your signature using your mouse.
+
+</div>
+
+
+<div class="buttons">
+
+<button
+class="clear-btn"
+onclick="clearSignature()">
+
+Clear
+
+</button>
+
+
+<button
+class="reserve-btn"
+onclick="reserveSeat()">
+
+🎟️ Reserve My Seat
+
+</button>
+
+</div>
+
+</div>
+
+
+<button
+class="close-btn"
+onclick="closeTheatre()">
+
+← Back
+
+</button>
+
+
+</div>
+
+
+<!-- RED CURTAINS -->
+
+<div class="curtain left-curtain"></div>
+
+<div class="curtain right-curtain"></div>
+
+
+</div>
+
+
+<!-- =====================================================
+     CELEBRATION
+===================================================== -->
+
+<div
+class="celebration"
+id="celebration">
+
+
+<div
+id="celebrationEffects">
+</div>
+
+
+<div class="celebration-card">
+
+
+<div class="celebration-emoji">
+🎉🎓🎊
+</div>
+
+
+<h1>
+We're Celebrating With You!
+</h1>
+
+
+<div
+class="welcome-name"
+id="welcomeName">
+Teacher
+</div>
+
+
+<p>
+
+Your presence has made our
+Teachers' Day celebration even more special! 💙
+
+</p>
+
+
+<div
+class="big-seat"
+id="celebrationSeat">
+
+🎟️ Seat 01
+
+</div>
+
+
+<p>
+
+We are delighted to welcome you
+to our program.
+
+<br><br>
+
+<strong>
+Thank you for accepting our invitation!
+</strong>
+
+</p>
+
+
+<button
+class="celebrate-close"
+onclick="closeCelebration()">
+
+✨ Continue
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   TEACHER LIST
+===================================================== */
+
+const teachers = [
+
+["Dr. Rameshwar R. Gaikwad","Director","assets/rameshwar.png"],
+
+["Dr. Sabiha Shaikh Mam","MSPM Coordinator","assets/sabiha.jpg"],
+
+["Abhijit Ghodake Sir","HOD BBA","assets/abhijit.jpg"],
+
+["Pallavi Dakhore Mam","HOD BCA","assets/pallavi.jpg"],
+
+["Rajendra Motinge Sir","HOD BCS","assets/rajendra.jpg"],
+
+["Shekhar Kothule Sir","HOD SPORTS","assets/shekhar.jpg"],
+
+["Vikas Mishra Sir","Faculty","assets/vikas.jpg"],
+
+["Deepali Kawthekar Mam","Faculty","assets/deepali.jpeg"],
+
+["Kalyani Shevatekar Mam","Faculty","assets/kalyani.jpg"],
+
+["Pratik Jaiswal Sir","Faculty","assets/pratik.jpg"],
+
+["Priya Shinde Mam","Faculty","assets/priya.jpg"],
+
+["Shweta Jadhav Mam","Faculty","assets/shweta.jpeg"],
+
+["Pooja Gandhi Mam","Faculty","assets/pooja.jpg"],
+
+[" Adhya Asnikar Mam","Faculty","assets/asnikar.jpg"],
+
+["Tabassum Shaikh Mam","Faculty","assets/tabassum.jpg"],
+
+["Nirmitee Jojare Mam","Faculty","assets/nirmitee.jpeg"],
+
+["Tofik Beg Mam","Faculty","assets/tofik.jpg"],
+
+["Preeti Jadhav Mam","Faculty","assets/preeti.jpg"]
+
+];
+
+
+/* =====================================================
+   CREATE TEACHERS
+===================================================== */
+
+const container =
+document.getElementById(
+"teachersContainer"
+);
+
+teachers.forEach(function(t){
+
+    const card =
+    document.createElement("div");
+
+    card.className="teacher";
+
+    card.innerHTML=`
+
+        <div class="avatar">
+            <img src="${t[2]}" alt="${t[0]}">
+        </div>
+
+        <div>
+
+            <div class="teacher-name">
+                ${t[0]}
+            </div>
+
+            <div class="teacher-role">
+                ${t[1]}
+            </div>
+
+        </div>
+
+        <div class="arrow">
+            ›
+        </div>
+
+    `;
+
+    card.onclick=function(){
+
+        openTeacher(
+            t[0],
+            t[1],
+            t[2]
+        );
+
+    };
+
+    container.appendChild(card);
+
+});
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+let currentTeacher="";
+
+let currentRole="";
+
+let reservations={};
+
+let drawing=false;
+
+let hasDrawn=false;
+
+
+/* =====================================================
+   MAIN SPRINKLER
+===================================================== */
+
+function createMainSparkles(){
+
+    const area =
+    document.getElementById(
+        "mainSparkles"
+    );
+
+    const symbols=[
+        "✦",
+        "✧",
+        "✨",
+        "⭐",
+        "❇",
+        "·"
+    ];
+
+    for(
+        let i=0;
+        i<70;
+        i++
+    ){
+
+        const s =
+        document.createElement("div");
+
+        s.className="main-spark";
+
+        s.innerHTML=
+        symbols[
+            Math.floor(
+                Math.random()*
+                symbols.length
+            )
+        ];
+
+        s.style.left =
+        Math.random()*100+"vw";
+
+        s.style.top =
+        Math.random()*100+"vh";
+
+        s.style.fontSize =
+        (7+Math.random()*18)+"px";
+
+        s.style.animationDelay =
+        Math.random()*3+"s";
+
+        s.style.animationDuration =
+        (1.5+
+        Math.random()*3)+"s";
+
+        area.appendChild(s);
+    }
+}
+
+createMainSparkles();
+
+
+/* =====================================================
+   CANVAS
+===================================================== */
+
+const canvas =
+document.getElementById(
+"signatureCanvas"
+);
+
+const ctx =
+canvas.getContext("2d");
+
+
+function setupCanvas(){
+
+    const rect =
+    canvas.getBoundingClientRect();
+
+    const ratio =
+    window.devicePixelRatio || 1;
+
+    canvas.width =
+    Math.round(
+        rect.width*ratio
+    );
+
+    canvas.height =
+    Math.round(
+        rect.height*ratio
+    );
+
+    ctx.setTransform(
+        ratio,
+        0,
+        0,
+        ratio,
+        0,
+        0
+    );
+
+    ctx.lineWidth=3;
+
+    ctx.lineCap="round";
+
+    ctx.lineJoin="round";
+
+    ctx.strokeStyle="#075db5";
+}
+
+
+/* =====================================================
+   SIGNATURE POSITION
+===================================================== */
+
+function position(e){
+
+    const rect =
+    canvas.getBoundingClientRect();
+
+    return{
+
+        x:e.clientX-rect.left,
+
+        y:e.clientY-rect.top
+
+    };
+}
+
+
+/* =====================================================
+   START DRAW
+===================================================== */
+
+canvas.addEventListener(
+"pointerdown",
+function(e){
+
+    e.preventDefault();
+
+    drawing=true;
+
+    hasDrawn=true;
+
+    canvas.setPointerCapture(
+        e.pointerId
+    );
+
+    const p=position(e);
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        p.x,
+        p.y
+    );
+
+    const status =
+    document.getElementById(
+        "signatureStatus"
+    );
+
+    status.innerHTML=
+    "✓ Signature captured";
+
+    status.classList.add(
+        "success"
+    );
+
+});
+
+
+/* =====================================================
+   DRAW
+===================================================== */
+
+canvas.addEventListener(
+"pointermove",
+function(e){
+
+    if(!drawing)return;
+
+    e.preventDefault();
+
+    const p=position(e);
+
+    ctx.lineTo(
+        p.x,
+        p.y
+    );
+
+    ctx.stroke();
+
+});
+
+
+/* =====================================================
+   STOP
+===================================================== */
+
+canvas.addEventListener(
+"pointerup",
+function(e){
+
+    drawing=false;
+
+    try{
+
+        canvas.releasePointerCapture(
+            e.pointerId
+        );
+
+    }catch(err){}
+
+    ctx.closePath();
+
+});
+
+
+canvas.addEventListener(
+"pointercancel",
+function(){
+
+    drawing=false;
+
+});
+
+
+/* =====================================================
+   CLEAR
+===================================================== */
+
+function clearSignature(){
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    hasDrawn=false;
+
+    const status =
+    document.getElementById(
+        "signatureStatus"
+    );
+
+    status.innerHTML=
+    "Draw your signature using your mouse.";
+
+    status.classList.remove(
+        "success"
+    );
+}
+
+
+/* =====================================================
+   OPEN TEACHER
+===================================================== */
+
+function openTeacher(
+name,
+role,
+image
+){
+
+    currentTeacher=name;
+
+    currentRole=role;
+
+    document.getElementById(
+        "teacherName"
+    ).innerHTML=name;
+
+    document.getElementById(
+        "teacherRole"
+    ).innerHTML=role;
+
+    document.getElementById(
+        "teacherIcon"
+    ).innerHTML=`<img src="${image}" alt="${name}">`;
+
+    clearSignature();
+
+    const theatre =
+    document.getElementById(
+        "theatre"
+    );
+
+    theatre.classList.add(
+        "active"
+    );
+
+    setTimeout(
+        function(){
+
+            setupCanvas();
+
+        },
+        100
+    );
+
+    setTimeout(
+        function(){
+
+            theatre.classList.add(
+                "open"
+            );
+
+        },
+        150
+    );
+}
+
+
+/* =====================================================
+   RESERVE
+===================================================== */
+
+function reserveSeat(){
+
+    if(!hasDrawn){
+
+        alert(
+        "✍️ Please sign first to confirm your presence."
+        );
+
+        return;
+    }
+
+    if(
+        reservations[currentTeacher]
+    ){
+
+        alert(
+        "This teacher has already reserved a seat."
+        );
+
+        return;
+    }
+
+    const number =
+    Object.keys(
+        reservations
+    ).length+1;
+
+    const seat =
+    "Seat "+
+    String(number).padStart(
+        2,
+        "0"
+    );
+
+    reservations[currentTeacher]={
+        role:currentRole,
+        seat:seat
+    };
+
+    updateDashboard();
+
+    showCelebration(
+        currentTeacher,
+        seat
+    );
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+function updateDashboard(){
+
+    const count =
+    Object.keys(
+        reservations
+    ).length;
+
+    document.getElementById(
+        "reservedCount"
+    ).innerHTML=count;
+
+    document.getElementById(
+        "remainingCount"
+    ).innerHTML=
+    teachers.length-count;
+
+    const list =
+    document.getElementById(
+        "reservedList"
+    );
+
+    list.innerHTML="";
+
+    if(count===0){
+
+        list.innerHTML=
+        `<div class="no-reservation">
+            No reservations yet.
+        </div>`;
+
+        return;
+    }
+
+    for(
+        const name in reservations
+    ){
+
+        const data =
+        reservations[name];
+
+        const item =
+        document.createElement(
+            "div"
+        );
+
+        item.className=
+        "reserved-item";
+
+        item.innerHTML=`
+
+            <div class="check">
+                ✓
+            </div>
+
+            <div>
+
+                <div class="reserved-name">
+                    ${name}
+                </div>
+
+                <div class="reserved-role">
+                    ${data.role}
+                </div>
+
+            </div>
+
+            <div class="reserved-seat">
+                ${data.seat}
+            </div>
+
+        `;
+
+        list.appendChild(item);
+    }
+}
+
+
+/* =====================================================
+   CLOSE THEATRE
+===================================================== */
+
+function closeTheatre(){
+
+    const theatre =
+    document.getElementById(
+        "theatre"
+    );
+
+    theatre.classList.remove(
+        "open"
+    );
+
+    setTimeout(
+        function(){
+
+            theatre.classList.remove(
+                "active"
+            );
+
+        },
+        1900
+    );
+}
+
+
+/* =====================================================
+   CELEBRATION
+===================================================== */
+
+function showCelebration(
+name,
+seat
+){
+
+    document.getElementById(
+        "welcomeName"
+    ).innerHTML=name;
+
+    document.getElementById(
+        "celebrationSeat"
+    ).innerHTML=
+    "🎟️ "+seat;
+
+    document.getElementById(
+        "celebration"
+    ).classList.add(
+        "show"
+    );
+
+    createCelebrationConfetti();
+
+    createBurst();
+
+    document.getElementById(
+        "theatre"
+    ).classList.remove(
+        "open"
+    );
+}
+
+
+/* =====================================================
+   CELEBRATION CONFETTI
+===================================================== */
+
+function createCelebrationConfetti(){
+
+    const area =
+    document.getElementById(
+        "celebrationEffects"
+    );
+
+    area.innerHTML="";
+
+    const symbols=[
+        "🎉",
+        "🎊",
+        "✨",
+        "⭐",
+        "💙",
+        "🎓",
+        "✦",
+        "🥳"
+    ];
+
+    for(
+        let i=0;
+        i<120;
+        i++
+    ){
+
+        const c =
+        document.createElement(
+            "div"
+        );
+
+        c.className="confetti";
+
+        c.innerHTML=
+        symbols[
+            Math.floor(
+                Math.random()*
+                symbols.length
+            )
+        ];
+
+        c.style.left=
+        Math.random()*100+"vw";
+
+        c.style.fontSize=
+        (10+
+        Math.random()*17)+"px";
+
+        c.style.setProperty(
+            "--x",
+            (-150+
+            Math.random()*300)+"px"
+        );
+
+        c.style.setProperty(
+            "--duration",
+            (2+
+            Math.random()*3)+"s"
+        );
+
+        area.appendChild(c);
+
+        setTimeout(
+            function(){
+
+                c.remove();
+
+            },
+            5500
+        );
+    }
+}
+
+
+/* =====================================================
+   CENTER SPARKLE BURST
+===================================================== */
+
+function createBurst(){
+
+    const area =
+    document.getElementById(
+        "celebrationEffects"
+    );
+
+    const symbols=[
+        "✨",
+        "⭐",
+        "✦",
+        "✧",
+        "💫"
+    ];
+
+    for(
+        let i=0;
+        i<90;
+        i++
+    ){
+
+        const s =
+        document.createElement(
+            "div"
+        );
+
+        s.className="burst";
+
+        s.innerHTML=
+        symbols[
+            Math.floor(
+                Math.random()*
+                symbols.length
+            )
+        ];
+
+        const angle =
+        Math.random()*
+        Math.PI*2;
+
+        const distance =
+        100+
+        Math.random()*650;
+
+        s.style.setProperty(
+            "--x",
+            Math.cos(angle)*
+            distance+"px"
+        );
+
+        s.style.setProperty(
+            "--y",
+            Math.sin(angle)*
+            distance+"px"
+        );
+
+        s.style.animationDelay=
+        Math.random()*.4+"s";
+
+        area.appendChild(s);
+
+        setTimeout(
+            function(){
+
+                s.remove();
+
+            },
+            2200
+        );
+    }
+}
+
+
+/* =====================================================
+   CLOSE CELEBRATION
+===================================================== */
+
+function closeCelebration(){
+
+    document.getElementById(
+        "celebration"
+    ).classList.remove(
+        "show"
+    );
+
+    setTimeout(
+        function(){
+
+            document.getElementById(
+                "theatre"
+            ).classList.remove(
+                "active"
+            );
+
+        },
+        300
+    );
+}
+
+
+/* =====================================================
+   ESCAPE BUTTON
+===================================================== */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+    if(e.key==="Escape"){
+
+        const celebration =
+        document.getElementById(
+            "celebration"
+        );
+
+        if(
+            celebration.classList.contains(
+                "show"
+            )
+        ){
+
+            closeCelebration();
+
+        }else{
+
+            closeTheatre();
+
+        }
+
+    }
+
+});
+
+
+/* =====================================================
+   INITIAL NUMBERS
+===================================================== */
+
+document.getElementById(
+"totalTeachers"
+).innerHTML=
+teachers.length;
+
+document.getElementById(
+"remainingCount"
+).innerHTML=
+teachers.length;
+
+</script>
+
+</body>
+</html>
